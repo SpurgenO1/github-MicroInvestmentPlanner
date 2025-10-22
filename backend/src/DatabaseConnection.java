@@ -6,7 +6,7 @@ public class DatabaseConnection {
 
     private static final String URL = "jdbc:mysql://127.0.0.1:3306/micro_investment_planner";
     private static final String USER = "root"; // your MySQL username
-    private static final String PASSWORD = "Spurgena@27"; // your MySQL password
+    private static final String PASSWORD = "xxxxxxxx"; // your MySQL password
 
     public static Connection getConnection() {
         try {

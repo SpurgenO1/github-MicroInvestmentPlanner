@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="animated-bg"></div>
+<div class="container">
+    <h1>Welcome, <span id="username">User</span></h1>
+
+    <!-- Summary Cards -->
+    <div class="dashboard-cards">
+        <div class="card">
+            <h3>Total Investments</h3>
+            <p id="totalInvestments">₹0</p>
+        </div>
+        <div class="card">
+            <h3>Active Goals</h3>
+            <p id="activeGoals">0</p>
+        </div>
+        <div class="card">
+            <h3>Pending Transactions</h3>
+            <p id="pendingTransactions">0</p>
+        </div>
+    </div>
+
+    <!-- Chart -->
+    <div class="chart-container">
+        <canvas id="investmentChart"></canvas>
+    </div>
+</div>
+<script src="js/main.js"></script>
+<script>
+const ctx = document.getElementById('investmentChart').getContext('2d');
+new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['Jan','Feb','Mar','Apr','May','Jun'],
+        datasets: [{
+            label: 'Investment Growth',
+            data: [1000,1500,2000,2500,3000,4000],
+            borderColor: '#4f46e5',
+            backgroundColor: 'rgba(79,70,229,0.2)',
+            tension: 0.4
+        }]
+    },
+    options: { responsive:true }
+});
+</script>
+</body>
+</html>

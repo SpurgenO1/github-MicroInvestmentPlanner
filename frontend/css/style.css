@@ -1,0 +1,188 @@
+/* =======================
+   Global Styles
+======================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body, html {
+    height: 100%;
+    color: #fff;
+    background: #0d1117;
+    overflow-x: hidden;
+}
+
+/* =======================
+   Animated Gradient Background
+======================= */
+.animated-bg {
+    position: fixed;
+    top:0; left:0;
+    width:100%;
+    height:100%;
+    background: linear-gradient(270deg, #0d1117, #1f2937, #0d1117);
+    background-size: 600% 600%;
+    animation: gradientBG 20s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* =======================
+   Container
+======================= */
+.container {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+/* =======================
+   Forms
+======================= */
+.form-box {
+    background: rgba(0,0,0,0.7);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+    margin: 20px auto;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4f46e5;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #6366f1;
+}
+
+/* Toggle register/login */
+.register-box { display: none; }
+p span { color: #4f46e5; cursor: pointer; text-decoration: underline; }
+
+/* =======================
+   Dashboard Cards
+======================= */
+.dashboard-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.card {
+    background: rgba(79,70,229,0.2);
+    color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    min-width: 200px;
+    margin: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+/* =======================
+   Tables
+======================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgba(0,0,0,0.7);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+table th {
+    background-color: rgba(79,70,229,0.8);
+}
+
+table tr:hover {
+    background-color: rgba(79,70,229,0.3);
+}
+
+/* =======================
+   Progress Bars (Goals)
+======================= */
+.progress-bar {
+    width: 100%;
+    background: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 20px;
+}
+
+.progress {
+    height: 100%;
+    background: #4f46e5;
+    width: 0%;
+    transition: 1s;
+}
+
+/* =======================
+   Charts
+======================= */
+.chart-container {
+    background: rgba(0,0,0,0.7);
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 30px;
+}
+
+/* =======================
+   Responsive Design
+======================= */
+@media (max-width: 768px) {
+    .dashboard-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .container {
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    input, select, button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

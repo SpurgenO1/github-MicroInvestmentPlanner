@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Panel</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="animated-bg"></div>
+<div class="container">
+    <h1>Admin Panel</h1>
+
+    <div class="form-box">
+        <h2>Add Scheme</h2>
+        <form id="schemeForm">
+            <input type="text" placeholder="Scheme Name" required>
+            <input type="text" placeholder="Description" required>
+            <input type="number" placeholder="Interest Rate (%)" required>
+            <input type="number" placeholder="Duration (months)" required>
+            <select required>
+                <option value="">Select Risk Level</option>
+                <option>Low</option>
+                <option>Medium</option>
+                <option>High</option>
+            </select>
+            <button type="submit">Add Scheme</button>
+        </form>
+    </div>
+
+    <h2>All Users</h2>
+    <table id="usersTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
